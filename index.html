@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newton-Raphson </title>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+
+</head>
+<body>
+    <h1>Newton-Raphson Method</h1>
+    <div class = "content-wrapper">
+        <div>
+            <form id="input-fields"> 
+                <div id="input">
+                    <label for="function">Function f(x):</label>
+                    <math-field id="function" class="input" ></math-field>
+                    <div class="info-icon" data-hover="Input the function">
+                        <span class="info-hover" >
+
+                        </span>
+                    </div>
+                </div>
+
+                <div id="input">
+                    <label for="initial-value">Initial value:</label>
+                    <math-field id="initial-value" class="input"></math-field>
+                    <div class="info-icon" data-hover="Initial guess for the root">
+                        <span class="info-hover" >
+
+                        </span>
+                    </div>
+                </div>
+
+                <div id="input">
+                    <label for="error-percent">Percent of Error:</label>
+                    <math-field id="error-percent" class="input"></math-field>
+                    <div class="info-icon" data-hover="Error estimate of the root">
+                        <span class="info-hover" >
+
+                        </span>
+                    </div>
+                </div>
+                
+
+            </form>
+            <button id="calculate">Calculate</button>
+        </div>
+
+        <div class="results-wrapper">
+            <table id="results"></table>
+            <div id="final-result"></div>
+        </div>
+    </div>
+    
+    <div id="steps-wrapper"></div>
+
+    <div id="newton-raphson">
+        <h1 class =  "section-heading">About the Newton-Raphson Method</h1>
+        <p>The Newton-Raphson method was named after Newton and Joseph Raphson. 
+            This method, also known as the tangent method,
+             considers tangents drawn at the initial approximations, 
+             which gradually lead to the real root. </p>
+    </div>
+
+    <div id = "Limitations">
+        <h1 class =  "section-heading">Limitations</h1>
+    </div>
+
+    <div id="Algorithm">
+        <h1 class =  "section-heading">Algorithm</h1>
+
+    </div>
+    <div id="About-us">
+        <h1 class =  "section-heading">About us</h1>
+    
+    </div>
+ 
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src ="js/polynomial.min.js"></script>
+    <script src="https://unpkg.com/mathlive"></script>
+    <script src="js/script.js"></script>
+    <footer>Numericals © 2022</footer>
+</body>
+</html>
