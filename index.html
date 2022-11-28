@@ -56,7 +56,6 @@
                     <div id="final-result"></div>
                 </div>
             </div>
-            
             <div id="steps-wrapper"></div>
         </div>
         
@@ -71,31 +70,22 @@
 
             <div id="algorithm">
                 <h1 class =  "section-heading">Algorithm</h1>
-                1. Get the function f(x), initial value(x<sub>i</sub>), and the maximum error percent(e) of the root as an input
-                <br>
-                2. Get the derivation f(x)
-                <br>
-                3. Get theWith a given initial value(x), compute the value of f(x) and its derivative f'(x)
-                <br>
-                4. With the formula:  x<sub>i+1</sub> =x<sub>i</sub>-<sup>f(x<sub>i</sub>)</sup>&frasl;<sub>f'(x<sub>i</sub>)</sub> , compute for the succeeding approximate root
-                <br>
-                5. Solve for the approximate percent relative error (&#x2208<sub>&#x221D</sub>). &#x2208<sub>&#x221D</sub>  =|<sup>x<sub>i+1</sub>- x<sub>i</sub>&frasl;</sup><sub>x<sub>i+1</sub></sub>|  100%. 
-                <br>
-                6. If the  is &#x2208 &#x3e e,
-                <br>   
-                &nbsp; set x = x<sub>i + 1</sub>
-                <br>
-                &nbsp; go back to step 4
-                <br>
-                else, x<sub>i + 1</sub> is the approximate root
+                <ol class = "steps">
+                    <li class = "s1">Get the function f(x), initial value(x<sub>i</sub>), and the maximum error percent(e) of the root as an input</li>
+                    <li class = "s2">Get the derivation f(x)</li>
+                    <li class = "s3">With a given initial value(x), compute the value of f(x) and its derivative f'(x)</li>
+                    <li class = "s4">With the formula:  x<sub>i+1</sub> =x<sub>i</sub>-<sup>f(x<sub>i</sub>)</sup>&frasl;<sub>f'(x<sub>i</sub>)</sub> , compute for the succeeding approximate root</li>
+                    <li class = "s5">Solve for the approximate percent relative error (&#x2208<sub>&#x221D</sub>). &#x2208<sub>&#x221D</sub>  =|<sup>x<sub>i+1</sub>- x<sub>i</sub>&frasl;</sup><sub>x<sub>i+1</sub></sub>|  100%. </li>
+                    <li class = "s6"> If the  is &#x2208 &#x3e e, &nbsp; set x = x<sub>i + 1</sub> &nbsp; go back to step 4 else, x<sub>i + 1</sub> is the approximate root</li>
+                </ol>
             </div>
 
-            <!-- <div id="about">
+            <div id="about">
                 <h1 class="section-heading">About us</h1>
                 <p>Our team members are hardworking passionate individuals who strive excellency in the things we do. 
                     We are students who are currently enrolled in Saint Louis University, under the course Bachelor of Science in Computer Science. 
                     We hope to become hardworking professionals within the foreseeable future.</p>
-            </div> -->
+            </div>
         </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -103,12 +93,7 @@
     <script src="https://unpkg.com/mathlive"></script>
     <script src="js/script.js"></script>
     <footer>
-        <div id="about">
-            <h1 class="section-heading">About us</h1>
-            <p>Our team members are hardworking passionate individuals who strive excellency in the things we do. 
-                We are students who are currently enrolled in Saint Louis University, under the course Bachelor of Science in Computer Science. 
-                We hope to become hardworking professionals within the foreseeable future.</p>
-        </div>
+
         Numericals © 2022
     </footer>
 </body>
