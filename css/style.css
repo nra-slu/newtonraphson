@@ -17,25 +17,27 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #eee8f7;
+  background-color: #e7ecef;
   overflow-x: hidden;
   font-family: 'Lato', sans-serif;
+  color: #274c77;
+
 }
 
 .keyboard-layer {
   color: black;
-  background-color: #c6ffab;
-  --keyboard-text: #505115;
+  background-color: #e7ecef;
+  --keyboard-text: black;
   --keyboard-text-active: black;
-  --keycap-background: #008000;
-  --keycap-background-active: #eee8f7;
-  --keycap-secondary-text: #eee8f7;
+  --keycap-background: #274c77;
+  --keycap-background-active: #ffffff;
+  --keycap-secondary-text: #ffffff;
   --keycap-modifier-background: rgb(99, 98, 98);
 
 }
 
 math-field::part(virtual-keyboard-toggle) {
-  color: #008000;
+  color: #274c77;
 }
 
 .content-wrapper {
@@ -48,7 +50,7 @@ h1 {
   margin: 5rem;
   margin-bottom: 3rem;
   font-size: 3rem;
-  color: #008000;
+  color: e7ecef;
   text-align: center;
 }
 
@@ -59,20 +61,21 @@ label {
 }
 
 #calculate {
-  --c: #008000;
+  --c: #a3cef1;
   /* the color */
   width: 8rem;
   height: 3rem;
   font-size: 1.2rem;
   margin-top: 1rem;
   margin-left: 15rem;
-  color: #0000;
+  color: #274c77;
   background:
     linear-gradient(90deg, #fff 50%, var(--c) 0) calc(100% - var(--_p, 0%))/200% 100%,
     linear-gradient(var(--c) 0 0) 0% 100%/var(--_p, 0%) 100% no-repeat;
   -webkit-background-clip: text, padding-box;
   background-clip: text, padding-box;
   transition: 0.3s;
+  font-weight: bold;
 
 }
 
@@ -83,7 +86,7 @@ label {
 .results-wrapper {
   width: 30vmax;
   max-height: 60vh;
-  border: 1px solid #008000;
+  border: 1px solid #274c77;
   overflow: auto;
   flex-shrink: 0;
 }
@@ -112,7 +115,7 @@ label {
 }
 
 #results tr th {
-  background-color: #008000;
+  background-color: #29627e;;
   color: white;
 }
 
@@ -139,7 +142,7 @@ td:first-child {
 }
 
 .table-data:nth-of-type(odd) {
-  background: #c6ffab;
+  background: #a3cef1;
 }
 
 #final-result {
@@ -205,6 +208,8 @@ dl {
 
 dt {
   font-size: 1.3rem;
+  color: #274c77;
+  font-weight: bold;
 }
 
 dd {
@@ -265,17 +270,20 @@ dd span {
 #content {
   display: flex;
   flex-direction: row;
-  gap: 1rem;
+  gap: 0.5rem;
 }
 
 #newton-raphson {
   text-align: center;
-
+  margin-bottom: 1.5rem;
 }
 #algorithm li{
-margin: 20px
+margin: 10px;
+text-align: left;
 }
-
+#algorithm{
+  margin-bottom: 1.5rem;
+}
 #about {
   text-align: center;
 
@@ -286,11 +294,11 @@ footer{
   text-align: center;
   border-top: 2px solid black;
   padding: 0.5rem 0;
-  position: absolute;
+  position: relative;
   left: 0;
   bottom: 0;
   background-color: #eee8f7;
-  height: 2;
+  
 
 }
 
@@ -310,7 +318,7 @@ footer{
   }
 
   #calculate:active{
-    color: #008000;
+    color: #274c77;
   }
   #content {
     display: flex;
