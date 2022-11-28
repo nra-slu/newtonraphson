@@ -12,7 +12,6 @@ var button = document.getElementById('calculate')
 
 button.addEventListener('click', calculate);        // add event listener to calculate
 var iterations = [];                                
-
 var tableHeaders = [`${variable}<sub>i</sub>`, `f(${variable}<sub>i-1</sub>)`, `ε<sub>a</sub>`];
 var results = $("#results");
 var hr = $('<tr></tr>');
@@ -55,6 +54,7 @@ function calculate(){
         <dd>&nbspPercent of error = ${ea}</dd> 
     </dl> <br>  
     `);
+
     const parser = math.parser();
 
     while(pe > ea){
@@ -93,6 +93,13 @@ function calculate(){
 
 
 function findVariable(fx) {         //returns the variable used in the function
+    tableHeaders = [`${variable}<sub>i</sub>`, `f(${variable}<sub>i-1</sub>)`, `ε<sub>a</sub>`];
+    results = $("#results");
+    hr = $('<tr></tr>');
+    tableHeaders.forEach(e => {
+        hr.append($(`<th>${e}</th>`));
+    });
+    results.append(hr);
     let alpha = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
     
     for (i = 0; i < fx.length; i++) {
