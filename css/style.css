@@ -98,7 +98,6 @@ label {
   padding: 1rem;
   margin-right: 1rem;
   max-height: calc(100vh - 40px);
-  overflow-y: scroll;
   position:sticky;
   top: 0;
   align-self: flex-start;
