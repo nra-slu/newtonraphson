@@ -97,7 +97,7 @@ label {
   box-shadow: inset 5px 0 4px -5px #29627e;
   padding: 1rem;
   margin-right: 1rem;
-  max-height: calc(100vh - 40px);
+  min-height: calc(100vh - 40px);
   position:sticky;
   top: 0;
   align-self: flex-start;
