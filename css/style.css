@@ -41,6 +41,7 @@ math-field::part(virtual-keyboard-toggle) {
 .content-wrapper {
   display: flex;
   gap: 1rem;
+  height: 200px;
   margin-left: 5rem;
 }
 
@@ -93,6 +94,9 @@ label {
   box-shadow: inset 5px 0 5px -5px #29627e;
   padding: 1rem;
   margin-right: 1rem;
+  position:sticky;
+  top: 0;
+  align-self: flex-start;
 }
 
 #results {
@@ -264,13 +268,8 @@ dd span {
 }
 
 #newton-raphson {
-  text-align: center;
+  text-align: justify;
 
-}
-
-#about {
-  text-align: center;
-  padding-bottom: 2%;
 }
 
 footer {
@@ -278,11 +277,18 @@ footer {
   text-align: center;
   border-top: 2px solid black;
   padding: 0.5rem 0;
-  position: relative;
   left: 0;
   bottom: 0;
-  background-color: #eee8f7;
-  height: 2rem;
+  background-color: gray;
+  height: fit-content;
+}
+
+footer h2{
+  text-size-adjust:initial;
+}
+
+footer p {
+  padding-inline: 7rem;
 }
 
 @media (max-width: 768px) {
@@ -303,6 +309,15 @@ footer {
     display: flex;
     flex-direction: column;
     gap: 3rem;
+  }
+
+  #newton-raphson p{
+    text-indent: 7%;
+  }
+
+  #algorithm{
+    text-align: left;
+    width: max-contents;
   }
 
   .input-field {
