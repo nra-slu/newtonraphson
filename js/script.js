@@ -12,7 +12,7 @@ var button = document.getElementById('calculate')
 
 button.addEventListener('click', calculate);        // add event listener to calculate
 var iterations = [];                                
-// generateAnswerTable(iterations);
+
 var tableHeaders = [`${variable}<sub>i</sub>`, `f(${variable}<sub>i-1</sub>)`, `ε<sub>a</sub>`];
 var results = $("#results");
 var hr = $('<tr></tr>');
@@ -26,7 +26,7 @@ function calculate(){
     finalResult.empty();
     let steps = $("#steps-wrapper");                        
     steps.empty();
-    let fx = $("#function").val().replace("{","").replace("}","");
+    let fx = $("#function").val().replace(/{/g,"").replace(/}/g,"");
     let variable = findVariable(fx);            
     let x1 = $("#initial-value").val();
     var ea = $("#error-percent").val() /100;
@@ -39,7 +39,7 @@ function calculate(){
     let iterations = [];
     document.getElementById("results").innerHTML = '';
     
-    let pe = 1;                                         //Percent Error
+    let pe = 1;                                                     //Percent Error
     let derivative = math.derivative(fx,variable).toString();                //get the 1st derivative
     
     index = 0;
