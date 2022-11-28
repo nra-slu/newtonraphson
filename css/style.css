@@ -43,6 +43,7 @@ math-field::part(virtual-keyboard-toggle) {
 .content-wrapper {
   display: flex;
   gap: 1rem;
+  height: 200px;
   margin-left: 5rem;
 }
 
@@ -97,6 +98,9 @@ label {
   padding: 1rem;
   margin-right: 1rem;
   min-height: calc(100vh - 40px);
+  position:sticky;
+  top: 0;
+  align-self: flex-start;
 }
 
 #results {
@@ -324,6 +328,15 @@ footer{
     display: flex;
     flex-direction: column;
     gap: 3rem;
+  }
+
+  #newton-raphson p{
+    text-indent: 7%;
+  }
+
+  #algorithm{
+    text-align: left;
+    width: max-contents;
   }
 
   .input-field {

@@ -26,7 +26,7 @@ function calculate(){
     finalResult.empty();
     let steps = $("#steps-wrapper");                        
     steps.empty();
-    let fx = $("#function").val();
+    let fx = $("#function").val().replace("{","").replace("}","");
     let variable = findVariable(fx);            
     let x1 = $("#initial-value").val();
     var ea = $("#error-percent").val() /100;
