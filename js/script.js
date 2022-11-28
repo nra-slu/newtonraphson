@@ -13,9 +13,9 @@ var button = document.getElementById('calculate')
 button.addEventListener('click', calculate);        // add event listener to calculate
 var iterations = [];                                
 // generateAnswerTable(iterations);
-let tableHeaders = [`${variable}<sub>i</sub>`, `f(${variable}<sub>i-1</sub>)`, `ε<sub>a</sub>`];
+var tableHeaders = [`${variable}<sub>i</sub>`, `f(${variable}<sub>i-1</sub>)`, `ε<sub>a</sub>`];
 var results = $("#results");
-let hr = $('<tr></tr>');
+var hr = $('<tr></tr>');
 tableHeaders.forEach(e => {
     hr.append($(`<th>${e}</th>`));
 });
@@ -26,7 +26,7 @@ function calculate(){
     finalResult.empty();
     let steps = $("#steps-wrapper");                        
     steps.empty();
-    let fx = $("#function").val().replace("{","").replace("}", "");
+    let fx = $("#function").val();
     let variable = findVariable(fx);            
     let x1 = $("#initial-value").val();
     var ea = $("#error-percent").val() /100;
@@ -111,7 +111,12 @@ function findVariable(fx) {         //returns the variable used in the function
 
 function generateAnswerTable(iterations){
     
-
+    results = $("#results");
+    hr = $('<tr></tr>');
+    tableHeaders.forEach(e => {
+        hr.append($(`<th>${e}</th>`));
+    });
+    results.append(hr);
     for (let i = 0; i < iterations.length; i++) {
         let tr = $('<tr class="table-data"></tr>');
         // console.log(iterations);

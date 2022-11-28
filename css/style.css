@@ -91,9 +91,10 @@ label {
 
 #right-pane {
   margin-left: .5rem;
-  box-shadow: inset 5px 0 5px -5px #29627e;
+  box-shadow: inset 5px 0 4px -5px #29627e;
   padding: 1rem;
   margin-right: 1rem;
+  min-height: calc(100vh - 40px);
   position:sticky;
   top: 0;
   align-self: flex-start;
@@ -193,6 +194,8 @@ td:first-child {
   gap: 0.5rem;
   margin: 1rem;
   margin-top: 2rem;
+  text-align: center;
+  align-items: center;
 }
 
 dl {
@@ -200,6 +203,7 @@ dl {
   display: flex;
   flex-wrap: nowrap;
   flex-direction: column;
+
   gap: 0.5rem;
 }
 
@@ -258,7 +262,8 @@ dd span {
   align-items: center;
   display: block;
   text-align: center;
-  margin-bottom: 3px;
+  margin-bottom: 1px;
+  margin-top: 2px;
 }
 
 #content {
@@ -270,6 +275,9 @@ dd span {
 #newton-raphson {
   text-align: justify;
 
+}
+#algorithm li{
+margin: 20px
 }
 
 footer {
@@ -296,7 +304,11 @@ footer p {
     text-align: center;
     display: flex;
   }
+  #right-pane {
 
+    box-shadow: none;
+  
+  }
   .content-wrapper {
     display: inline-block;
     margin-left: 0rem;
